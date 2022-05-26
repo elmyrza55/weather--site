@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Погода</title>
+    <title>Document</title>
     
 </head>
 
@@ -37,26 +37,28 @@
               <button class="btn btn-primary" type="submit">Найти</botton>
                 </div>
                
-              </form>
-              
-              <h4>{{Weather}}  <img src = "http://openweathermap.org/img/wn/{{ icon_id }}@2x.png" 
-              alt="">
-              </h4>
-              <br>
-              <h4> {{temp}} </h4>
-              <br>
-              <h4>{{condition_weather}}</h4>
-              <br>
-              <h4>{{feels_like}}</h4>
-              <br>
-              <h4>{{min_temp}}</h4>
-              <br>
-              <h4>{{max_temp}}</h4>
-              <br>
-              <h4>{{index.html}}</h4>
-              {% comment %} <img src = "http://openweathermap.org/img/wn/10d@2x.png" alt=""> {% endcomment %}
+          </form>
+          {{ my_city }}
+          {{ my_country }}
+          {{ my_cities }}
 
+          {% for i in my_cities %}
+          {{ i }}
+          {% endfor %}
+          <ul>
+          {% for i in my_cities %}
+          <li>{{ i }}</li> <br>
+        {% endfor %}
+
+        <ol>
+          {% for num in numbers %}
+           {% if num > 0 %}
+             <li>{{ num }}</li>
+            {% endif %} 
           
+          {% endfor %}
+        </ol>
+          </ul>
     </div>
         
 
